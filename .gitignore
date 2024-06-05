@@ -4,4 +4,5 @@ CMakeLists.txt
 .vscode
 CryptoLib.exe
 main.cpp
+.vs
 .gitignore
