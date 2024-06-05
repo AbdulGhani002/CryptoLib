@@ -4,11 +4,11 @@
 
 #ifndef CYPTOLIB_MAIN_H
 #define CYPTOLIB_MAIN_H
-
+#include <string>
 /*
  * TODO:Cryptographic Library
 
-TODO:Prime Number Generation:
+*DONE:Prime Number Generation:
 Implement algorithms to generate large prime numbers.
 Use methods like the Sieve of Eratosthenes and probabilistic tests like the Miller-Rabin primality test.
 
@@ -53,12 +53,18 @@ TODO:Quantum Cryptography:
 Study and implement basic quantum key distribution algorithms like BB84.
 Explore post-quantum cryptographic algorithms.
  */
-class CryotoLib {
-/*
-* Large Prime Numbers Generation Algorithm
-*/
-long generatePrimeNumber();
+class CryotoLib
+{
+    /*
+     * Large Prime Numbers Generation Algorithm
+     */
+    long generatePrimeNumber();
+    /*
+     * Encryption Algorithm using Advanced Encryption Standard (AES)
+     */
+    std::string encryptAES(std::string message, long key);
 };
 
+#include "CryptoLib.cpp"
 
-#endif //CYPTOLIB_MAIN_H
+#endif // CYPTOLIB_MAIN_H

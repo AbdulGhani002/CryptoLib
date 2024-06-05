@@ -6,7 +6,8 @@
 #include <cmath>
 #include <random>
 #include <chrono>
-
+#include <string>
+using namespace std;
 bool isPrime(int n)
 {
     if (n <= 1)
@@ -25,9 +26,8 @@ bool isPrime(int n)
 }
 long updateValue()
 {
-    long min = 100000;
     long max = 1000000000;
-    long value = (std::chrono::system_clock::now().time_since_epoch().count()) % (max - min + 1) + min;
+    long value = (std::chrono::system_clock::now().time_since_epoch().count()) % (max + 1);
     if (value < 0)
     {
         value = -value;
@@ -44,4 +44,16 @@ long generatePrimeNumber()
     }
 
     return prime;
+}
+
+
+std::string CryotoLib::encryptAES(std::string message, long key)
+{
+    // Convert the key to a string
+    std::string keyString = std::to_string(key);
+    // Generate a random initialization vector (IV)
+    // Create a cipher context
+    // Encrypt the padded message
+    //Return the encrypted message as a string
+    return std::string();
 }
