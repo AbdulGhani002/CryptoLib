@@ -54,7 +54,10 @@ Study and implement basic quantum key distribution algorithms like BB84.
 Explore post-quantum cryptographic algorithms.
  */
 class CryotoLib {
-
+/*
+* Large Prime Numbers Generation Algorithm
+*/
+long generatePrimeNumber();
 };
 
 
