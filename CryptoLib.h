@@ -53,18 +53,18 @@ TODO:Quantum Cryptography:
 Study and implement basic quantum key distribution algorithms like BB84.
 Explore post-quantum cryptographic algorithms.
  */
-class CryotoLib
+class CryptoLib
 {
+public:
     /*
      * Large Prime Numbers Generation Algorithm
      */
-    long generatePrimeNumber();
+    static long generatePrimeNumber();
     /*
      * Encryption Algorithm using Advanced Encryption Standard (AES)
      */
-    std::string encryptAES(std::string message, long key);
+    static std::string encryptAES(const std::string &message, long key);
 };
 
 #include "CryptoLib.cpp"
-
 #endif // CYPTOLIB_MAIN_H
