@@ -7,7 +7,6 @@
 
 /*
  * TODO:Cryptographic Library
-Key Components and Algorithms:
 
 TODO:Prime Number Generation:
 Implement algorithms to generate large prime numbers.
@@ -54,7 +53,7 @@ TODO:Quantum Cryptography:
 Study and implement basic quantum key distribution algorithms like BB84.
 Explore post-quantum cryptographic algorithms.
  */
-class Main {
+class CryotoLib {
 
 };
 
