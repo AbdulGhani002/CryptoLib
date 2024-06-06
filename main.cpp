@@ -1,8 +1,9 @@
-#include<iostream>
-#include"CryptoLib.h"
+#include "CryptoLib.h"
+#include <iostream>
+#include <string>
 
-using namespace std;
-int main(){
-    cout<<generatePrimeNumber()<<endl;
+int main()
+{
+    std::cout << CryptoLib::encryptAES("Abdul Ghani", CryptoLib::generatePrimeNumber()) << std::endl;
     return 0;
 }
