@@ -6,7 +6,7 @@ Welcome to the Cryptographic Library project! This repository aims to implement 
 
 ### Prime Number Generation
 - **Algorithms**: Implement methods to generate large prime numbers.
-- **Techniques**: Utilize the Sieve of Eratosthenes and probabilistic tests like the Miller-Rabin primality test.
+- **Techniques**: My Custom Method
 
 ### Encryption Algorithms
 - **Symmetric Encryption**: Implement AES (Advanced Encryption Standard) or DES (Data Encryption Standard).
