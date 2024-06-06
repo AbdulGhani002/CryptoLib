@@ -62,12 +62,26 @@ std::string generateRandomIV()
 std::string CryptoLib::encryptAES(const std::string &message, long key)
 {
     std::string keyString = std::to_string(key);
+
     std::string iv = generateRandomIV();
-    std::string cipher = "";
+    std::string cipher = iv;
+    
     for (int i = 0; i < message.length(); i++)
     {
         cipher += message[i] ^ keyString[i % keyString.length()] ^ iv[i % 16];
     }
 
     return std::string(cipher);
+}
+
+std::string CryptoLib::decryptAES(const std::string &cipher, long key)
+{
+    std::string keyString = std::to_string(key);
+    std::string iv = cipher.substr(0, 16);
+    std::string message = "";
+    for (int i = 16; i < cipher.length(); i++)
+    {
+        message += cipher[i] ^ keyString[(i - 16) % keyString.length()] ^ iv[(i - 16) % 16];
+    }
+    return std::string(message);
 }
