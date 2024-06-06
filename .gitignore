@@ -5,4 +5,3 @@ CMakeLists.txt
 CryptoLib.exe
 main.cpp
 .vs
-.gitignore
