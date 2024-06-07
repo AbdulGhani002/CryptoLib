@@ -16,11 +16,10 @@ Use methods like the Sieve of Eratosthenes and probabilistic tests like the Mill
 Symmetric Encryption: Implement AES (Advanced Encryption Standard) or DES (Data Encryption Standard).
 Asymmetric Encryption: Implement RSA (Rivest-Shamir-Adleman) and ECC (Elliptic Curve Cryptography).
 
-TODO:Hash Functions:
+*DONE:Hash Functions:
 Implement hash functions like SHA-256 (Secure Hash Algorithm 256-bit) and MD5 (Message Digest Algorithm 5).
-Explore creating your own custom hash functions and test their effectiveness.
 
-TODO:Digital Signatures:
+*DONE:Digital Signatures:
 Implement digital signature algorithms such as DSA (Digital Signature Algorithm) or ECDSA (Elliptic Curve Digital Signature Algorithm).
 Create a system for signing and verifying messages/documents.
 
@@ -69,6 +68,19 @@ public:
      * Decryption Algorithm using Advanced Encryption Standard (AES)
      */
     static std::string decryptAES(const std::string &cipher, long key);
+    /*
+     * Hash Function
+     */
+    static std::string hashFunction(const std::string &message);
+
+    /*
+     * Digital Signature Algorithm
+     */
+    static std::string signMessage(const std::string &message, long privateKey);
+    /*
+     * Verify Digital Signature
+     */
+    static bool verifySignature(const std::string &message, const std::string &signature, long publicKey);
 };
 
 #include "CryptoLib.cpp"

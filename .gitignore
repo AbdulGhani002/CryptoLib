@@ -4,4 +4,6 @@ CMakeLists.txt
 .vscode
 CryptoLib.exe
 .vs
+test.cpp
 main.cpp
+test.exe

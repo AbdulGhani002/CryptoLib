@@ -65,7 +65,7 @@ std::string CryptoLib::encryptAES(const std::string &message, long key)
 
     std::string iv = generateRandomIV();
     std::string cipher = iv;
-    
+
     for (int i = 0; i < message.length(); i++)
     {
         cipher += message[i] ^ keyString[i % keyString.length()] ^ iv[i % 16];
@@ -84,4 +84,23 @@ std::string CryptoLib::decryptAES(const std::string &cipher, long key)
         message += cipher[i] ^ keyString[(i - 16) % keyString.length()] ^ iv[(i - 16) % 16];
     }
     return std::string(message);
+}
+std::string CryptoLib::hashFunction(const std::string &message)
+{
+    std::string hash = "";
+    for (int i = 0; i < message.length(); i++)
+    {
+        hash += message[i] ^ 0x5A;
+    }
+    return hash;
+}
+std::string CryptoLib::signMessage(const std::string &message, long privateKey)
+{
+    std::string hash = hashFunction(message);
+    return encryptAES(hash, privateKey);
+}
+bool CryptoLib::verifySignature(const std::string &message, const std::string &signature, long publicKey)
+{
+    std::string hash = hashFunction(message);
+    return decryptAES(signature, publicKey) == hash;
 }
