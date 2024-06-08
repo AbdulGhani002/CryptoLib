@@ -23,34 +23,10 @@ Implement hash functions like SHA-256 (Secure Hash Algorithm 256-bit) and MD5 (M
 Implement digital signature algorithms such as DSA (Digital Signature Algorithm) or ECDSA (Elliptic Curve Digital Signature Algorithm).
 Create a system for signing and verifying messages/documents.
 
-TODO:Key Exchange Algorithms:
-Implement the Diffie-Hellman key exchange protocol.
-Explore and implement other key exchange methods like the Elliptic Curve Diffie-Hellman (ECDH).
 
-TODO:Random Number Generation:
-Implement pseudorandom number generators (PRNGs) and cryptographically secure PRNGs.
-Study and implement algorithms like the Linear Congruential Generator (LCG) and Mersenne Twister.
-
-TODO:Error Detection and Correction:
+*DONE:Error Detection and Correction:
 Implement algorithms for error detection (e.g., CRC, Cyclic Redundancy Check).
 Implement error-correcting codes like Hamming code and Reed-Solomon code.
-
-TODO:Steganography:
-Implement techniques for hiding information within digital media.
-Explore LSB (Least Significant Bit) method for image steganography.
-Advanced Features and Applications:
-
-TODO:Secure Communication Protocols:
-Build a basic implementation of TLS (Transport Layer Security) or SSL (Secure Sockets Layer).
-Implement end-to-end encryption for messaging applications.
-
-TODO:Blockchain Technology:
-Implement a simple blockchain and understand consensus algorithms like Proof of Work (PoW) and Proof of Stake (PoS).
-Explore smart contracts and decentralized applications (dApps).
-
-TODO:Quantum Cryptography:
-Study and implement basic quantum key distribution algorithms like BB84.
-Explore post-quantum cryptographic algorithms.
  */
 class CryptoLib
 {
@@ -81,6 +57,10 @@ public:
      * Verify Digital Signature
      */
     static bool verifySignature(const std::string &message, const std::string &signature, long publicKey);
+    /*
+    *Error Detection and Correction
+    */
+    static std::string crc(const std::string &message);
 };
 
 #include "CryptoLib.cpp"

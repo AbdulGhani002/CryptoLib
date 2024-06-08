@@ -104,3 +104,12 @@ bool CryptoLib::verifySignature(const std::string &message, const std::string &s
     std::string hash = hashFunction(message);
     return decryptAES(signature, publicKey) == hash;
 }
+std::string CryptoLib::crc(const std::string &message)
+{
+    std::string crc = "";
+    for (int i = 0; i < message.length(); i++)
+    {
+        crc += message[i] ^ 0x5A;
+    }
+    return crc;
+}
